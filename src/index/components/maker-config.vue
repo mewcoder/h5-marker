@@ -11,6 +11,7 @@
   bottom: 0;
   right: 0;
   width: 376px;
-  background: #eee;
+  background: #fff;
+  border-left: #e0e0e0;
 }
 </style>

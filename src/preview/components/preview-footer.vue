@@ -17,24 +17,15 @@
   align-items: center;
   background-color: #fff;
 
-  .links {
-    cursor: pointer;
-  }
-
   .links > a:not(:last-child) {
     border-right: 1px solid #e5e5e5;
   }
 
   .links > a {
+    cursor: pointer;
     padding: 0 6px;
     color: #666;
     font-size: 12px;
-  }
-
-  a {
-    color: #333;
-    background: transparent;
-    text-decoration: none;
   }
 }
 </style>

@@ -16,5 +16,6 @@ const count = ref(0);
 .preview-content {
   position: relative;
   min-height: 726px;
+  background: #fff;
 }
 </style>

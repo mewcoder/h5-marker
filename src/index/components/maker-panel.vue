@@ -5,10 +5,10 @@ import { components } from "../data";
 <template>
   <div class="marker-panel">
     <div v-for="item in components" :key="item.text" class="comp-item">
-      <el-icon :size="32">
+      <el-icon :size="28">
         <component :is="item.icon" />
       </el-icon>
-      <div>{{ item.text }}</div>
+      <div class="comp-item__text">{{ item.text }}</div>
     </div>
   </div>
 </template>
@@ -32,20 +32,24 @@ import { components } from "../data";
 .comp-item {
   position: relative;
   width: 100px;
-  height: 88px;
+  height: 80px;
   font-size: 12px;
   margin-bottom: 12px;
   margin-left: 12px;
   cursor: move;
+  color: #606266;
   background: #fff;
   display: inline-block;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  &__text {
+    margin-top: 4px;
+  }
   &:hover {
     background-color: #409eff;
-    color:#fff;
+    color: #fff;
   }
 }
 </style>

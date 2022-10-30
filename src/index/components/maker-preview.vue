@@ -4,6 +4,7 @@ import { Edit, Menu, Clock } from "@element-plus/icons-vue";
 
 <template>
   <div class="marker-preview">
+    <iframe class="preview-iframe" src="http://localhost:5173/preview.html" />
     <div class="preview-settings">
       <el-button :icon="Edit">页面设置</el-button>
       <el-button :icon="Menu">组件管理</el-button>
@@ -21,6 +22,18 @@ import { Edit, Menu, Clock } from "@element-plus/icons-vue";
   right: 376px;
   background-color: #f7f8fa;
 }
+
+.preview-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
 .preview-settings {
   position: absolute;
   top: 32px;

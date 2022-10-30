@@ -1,14 +1,16 @@
-<script setup></script>
+<script setup>
+import { ArrowLeftBold } from "@element-plus/icons-vue";
+</script>
 
 <template>
   <header class="marker-header">
     <div>
-      <el-button link>返回页面列表</el-button>
+      <el-button :icon="ArrowLeftBold" link>返回页面列表</el-button>
     </div>
     <div>
-      <el-button type="primary">预览</el-button>
+      <el-button>预览</el-button>
       <el-button>保存</el-button>
-      <el-button>下载</el-button>
+      <el-button type="primary">下载</el-button>
     </div>
   </header>
 </template>

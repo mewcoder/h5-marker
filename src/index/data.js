@@ -1,23 +1,23 @@
 const components = [
   {
-    icon: "Postcard",
-    text: "Postcard",
+    icon: "EditPen",
+    text: "EditPen",
   },
   {
-    icon: "Postcard",
-    text: "Postcard",
+    icon: "Switch",
+    text: "Switch",
   },
   {
-    icon: "Postcard",
-    text: "Postcard",
+    icon: "Filter",
+    text: "Filter",
   },
   {
-    icon: "Postcard",
-    text: "Postcard",
+    icon: "Clock",
+    text: "Clock",
   },
   {
-    icon: "Postcard",
-    text: "Postcard",
+    icon: "Star",
+    text: "Star",
   },
 ];
 
