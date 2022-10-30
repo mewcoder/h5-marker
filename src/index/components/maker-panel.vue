@@ -1,10 +1,26 @@
 <script setup>
 import { components } from "../data";
+import { dragTarget } from "../store";
+
+function handleDragStart(type) {
+  dragTarget.value = type;
+}
+function handleDragEnd() {
+  dragTarget.value = null;
+}
 </script>
 
 <template>
   <div class="marker-panel">
-    <div v-for="item in components" :key="item.text" class="comp-item">
+    <div
+      v-for="item in components"
+      :key="item.text"
+      class="comp-item"
+      draggable="true"
+      @dragstart="handleDragStart(item.type)"
+      @dragend="handleDragEnd"
+      @click="handleDragStart(item.type)"
+    >
       <el-icon :size="28">
         <component :is="item.icon" />
       </el-icon>

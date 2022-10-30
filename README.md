@@ -1,7 +1,23 @@
-# Vue 3 + Vite
+# h5-marker
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## schema
 
-## Recommended IDE Setup
+```json
+{
+  "text": "",
+  "name": "",
+  "icon": "",
+  "cofig": {
+    "label": "",
+    "type": "",
+    "value": ""
+  },
+  "configOption": {}
+}
+```
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## 拖拽
+- 拖拽效果实现
+- 拖拽实施坐标同步到iframe
+- iframe接受坐标变化并响应UI变化
+- drop 响应UI变化 同步数据变化

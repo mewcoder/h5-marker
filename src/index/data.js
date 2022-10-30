@@ -1,23 +1,23 @@
 const components = [
   {
     icon: "EditPen",
-    text: "EditPen",
+    text: "输入框",
+    type: "el-input",
   },
   {
     icon: "Switch",
-    text: "Switch",
+    text: "开关",
+    type: "el-switch",
   },
   {
     icon: "Filter",
-    text: "Filter",
-  },
-  {
-    icon: "Clock",
-    text: "Clock",
+    text: "下拉框",
+    type: "el-select",
   },
   {
     icon: "Star",
-    text: "Star",
+    text: "评分",
+    type: "el-rate",
   },
 ];
 

@@ -12,6 +12,12 @@ import PreviewFooter from "./components/preview-footer.vue";
   </div>
 </template>
 
+<style>
+body {
+  margin: 0;
+}
+</style>
+
 <style scoped>
 .preview-main {
   position: absolute;
