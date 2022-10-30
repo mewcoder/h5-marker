@@ -22,25 +22,26 @@ function handleDragging(mouse) {
   let { x, y, height, width } = viewBody.value.getBoundingClientRect();
   let offsetY = mouse.y - y;
   let offsetX = mouse.x - x;
-  console.log(mouse, x, y);
   let isIn = offsetX > 0 && offsetX < width && offsetY > 0 && offsetY < height;
   if (isIn) {
-    let nowComps = compList.value;
+    console.log("1");
+    let nowComps = [...compList.value];
     if (nowComps && nowComps.length) {
       nowComps.map((c, idx) => {
-        let target = document.getElementById(idx);
+        let target = document.getElementById(c + idx);
         let parent = target.parentNode;
         let top = target.offsetTop;
         let targetH = target.offsetHeight;
         if (offsetY > top && offsetY < top + targetH / 2) {
-          parent.insertBefore(placeholder, target);
+          parent.insertBefore(placeholder.value, target);
           insertIndex = idx;
         } else if (offsetY > top + targetH / 2 && offsetY < top + targetH) {
-          insertAfter(placeholder, target);
+          insertAfter(placeholder.value, target);
           insertIndex = idx + 1;
         }
       });
     }
+    console.log(insertIndex);
     placeholderShow.value = true;
   } else {
     insertIndex = 0;
@@ -50,14 +51,13 @@ function handleDragging(mouse) {
 
 function handleDrop(type) {
   if (placeholderShow.value) {
-    debugger;
     addComponent(type, insertIndex);
     placeholderShow.value = false;
   }
 }
 
 function addComponent(type, index) {
-  compList.value.splice(index, 1, type);
+  compList.value.splice(index, 0, type);
   selectedId.value = index;
 }
 onMounted(() => {
@@ -83,7 +83,12 @@ onUnmounted(() => {
 
 <template>
   <main ref="viewBody" class="preview-content">
-    <div class="preview-item" v-for="(comp, i) in compList" :key="i" :id="i">
+    <div
+      class="preview-item"
+      v-for="(comp, i) in compList"
+      :key="i"
+      :id="comp + i"
+    >
       <el-tooltip effect="dark" :content="comp" placement="left">
         <div
           class="item-content"

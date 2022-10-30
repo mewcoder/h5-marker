@@ -1,6 +1,6 @@
 <script setup>
-import PageConfig from "./page-config.vue";
-import ItemConfig from "./item-config.vue";
+import PageConfig from "./config/page-config.vue";
+import ItemConfig from "./config/item-config.vue";
 import { configType } from "../store";
 </script>
 
