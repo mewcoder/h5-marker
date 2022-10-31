@@ -8,6 +8,10 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "author": {
+    "name": "mewcoder",
+    "email": "1010953107@qq.com"
+  },
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
     "@vitejs/plugin-vue-jsx": "^2.1.0",

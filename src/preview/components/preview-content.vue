@@ -28,6 +28,7 @@ function handleDragging(mouse) {
     let nowComps = [...compList.value];
     if (nowComps && nowComps.length) {
       nowComps.map((c, idx) => {
+        if (!placeholder.value) return;
         let target = document.getElementById(c + idx);
         let parent = target.parentNode;
         let top = target.offsetTop;
@@ -126,9 +127,10 @@ onUnmounted(() => {
 }
 .item-content {
   display: inline-block;
-  width: 100%;
   cursor: pointer;
   min-height: 20px;
+  width: 358px;
+  padding: 0 8px;
   &:hover::before {
     border: 1px dashed #155bd4;
     content: "";

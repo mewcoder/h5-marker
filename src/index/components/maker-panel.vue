@@ -1,5 +1,5 @@
 <script setup>
-import { components } from "../data";
+import { components } from "../constant";
 import { dragTarget } from "../store";
 
 function handleDragStart(type) {
